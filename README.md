@@ -1,4 +1,4 @@
-#NGINX with HTTP2 Support and WebSSL 1.0.2
+# NGINX with HTTP2 Support and WebSSL 1.0.2
 
 ## Supported tags and respective `Dockerfile` links
 
