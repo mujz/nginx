@@ -15,6 +15,7 @@ RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC64107
       zlib1g \
       zlib1g-dev \
       libssl-dev \
+      libgd2-xpm-dev # dep for ngx_http_image_filter_module \
   && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://www.openssl.org/source/openssl-1.0.2k.tar.gz \
@@ -42,6 +43,7 @@ RUN cd nginx-${NGINX_VERSION} \
       --with-openssl=/usr \
       --with-http_realip_module \
       --with-http_stub_status_module \
+      --with-http_image_filter_module \
       --with-threads \
       --with-ipv6 \
   && make \
